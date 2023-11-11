@@ -2,17 +2,17 @@ package com.evirgenoguz.junglegymapp.ui.feature.sample
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.evirgenoguz.junglegymapp.core.common.NetworkResult
 import com.evirgenoguz.junglegymapp.core.common.base.BaseViewModel
-import com.evirgenoguz.junglegymapp.core.data.model.request.SampleRequestModel
 import com.evirgenoguz.junglegymapp.core.data.model.response.SampleResponseModel
 import com.evirgenoguz.junglegymapp.core.data.repository.SampleRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 // Eğer use case kullanılıyorsa constructorda sampleRepository yerine useCase çağrılıyor.
+@HiltViewModel
 class SampleViewModel @Inject constructor(private val sampleRepository: SampleRepository) :
     BaseViewModel() {
 
