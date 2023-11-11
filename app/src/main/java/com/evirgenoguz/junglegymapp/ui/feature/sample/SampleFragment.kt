@@ -1,6 +1,7 @@
 package com.evirgenoguz.junglegymapp.ui.feature.sample
 
 import android.view.LayoutInflater
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import com.evirgenoguz.junglegymapp.core.common.base.BaseFragment
 import com.evirgenoguz.junglegymapp.core.data.model.response.SampleResponseModel
@@ -46,7 +47,8 @@ class SampleFragment : BaseFragment<FragmentSampleBinding>() {
 
     private fun initListeners() {
         binding.btnClickAndBoom.setOnClickListener {
-            viewModel.sampleRequest()
+            //viewModel.sampleRequest()
+            Toast.makeText(requireContext(), "Button Clicked", Toast.LENGTH_LONG).show()
         }
     }
 
